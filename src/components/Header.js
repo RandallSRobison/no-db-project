@@ -1,35 +1,33 @@
-import React, {Component} from 'react'
-import AllParts from './AllParts'
+import React, { Component } from "react";
+
 
 class Header extends Component {
-    constructor(){
-        super()
+  constructor() {
+    super();
 
-        this.state = {
-            view: AllParts
-        }
-        this.handleView = this.handleView.bind(this)
-    }
+    this.state = {
+      view: "AllParts"
+    };
+  }
 
-handleView(){
-if(this.state.view === AllParts){
-    this.setState({view: AllParts})
-} else if(this.state.view === FavoriteParts){
-    this.setState({view: FavoriteParts})
-} else if(this.state.vew === AddPart){
-    this.setState({view: AddPart})
-}
-}
+  
 
-render(){
-    return(
-        <div>
-            <button>all parts</button>
-            <button>favorite parts</button>
-            <button>add part</button>
-        </div>
-    )
-}
+  render() {
+    return (
+      <div>
+        Header
+        <button onClick={() => this.props.handleChangeView("AllParts")}>
+          all parts
+        </button>
+        <button onClick={() => this.props.handleChangeView("FavoriteParts")}>
+          favorite parts
+        </button>
+        <button onClick={() => this.props.handleChangeView("AddParts")}>
+          add part
+        </button>
+      </div>
+    );
+  }
 }
 
-export default Header
+export default Header;
