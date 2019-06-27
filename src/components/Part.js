@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class Part extends Component {
   render() {
     return (
-      <div>
-        <div>{this.props.part.name}</div>
-        <div>{this.props.part.type}</div>
-        <div>{this.props.part.make}</div>
+      <div className="part-container">
+        <div className="part-card">SKU: {this.props.part.name}</div>
+        <div className="part-card">Type: {this.props.part.type}</div>
+        <div className="part-card">Make: {this.props.part.make}</div>
       </div>
     );
   }
