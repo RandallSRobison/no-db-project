@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import AllParts from "./components/AllParts";
+import FavoriteParts from "./components/FavoriteParts";
+import AddPart from "./components/AddPart";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import axios from "axios";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      view: "AllParts"
+    };
+  }
+
+  handleView() {
+    this.setState({ view: "" });
+  }
+
+  render() {
+    return <div className="App" />;
+  }
 }
 
 export default App;
